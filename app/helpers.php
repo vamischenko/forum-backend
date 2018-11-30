@@ -1,6 +1,6 @@
-<?
+<?php
 // composer dump-autoload сделать чтобы работало
-if (! function_exists('value_validation')) {
+if (!function_exists('value_validation')) {
     /*
      * @array
      */
