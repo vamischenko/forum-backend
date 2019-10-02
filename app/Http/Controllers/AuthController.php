@@ -46,13 +46,14 @@ class AuthController extends Controller
             ]);
             DB::table('users_info')->insert(['id'=>$user['id']]);
             DB::commit();
+            $token = JWTAuth::fromUser($user);
+            return response()->json(compact('user','token'),201);
         } catch (\Exception $e) {
             DB::rollBack();
+            return response()->json('Error created user',500);
         }
 
-        $token = JWTAuth::fromUser($user);
 
-        return response()->json(compact('user','token'),201);
     }
 
     /**

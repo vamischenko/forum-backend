@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use Faker\Factory;
 use App\User;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\DatabaseSeed;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;

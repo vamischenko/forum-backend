@@ -1,7 +1,4 @@
 <?php
-//header('Access-Control-Allow-Origin');
-//header('Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, PATCH, DELETE');
-//header( 'Access-Control-Allow-Headers: X-Requested-With, Authorization, Content-Type' );
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +24,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 Route::get('/social-auth/{provider}', 'Auth\SocialController@redirectToProvider')->name('auth.social');
 
 Route::get('/social-auth/{provider}/callback', 'Auth\SocialController@handleProviderCallback')->name('auth.social.callback');
+
